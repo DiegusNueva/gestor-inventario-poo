@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Nosifer';
-    src: url('/assets/fonts/Nosifer/Nosifer-Regular.ttf') format('truetype');
+    font-family: 'Nova Square';
+    src: url('/assets/fonts/NovaSquare/NovaSquare-Regular.ttf') format('truetype');
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 
 h1 {
     text-align: center;
-    font-family: 'Nosifer';
+    font-family: 'Nova Square';
     color: red;
 }
 
