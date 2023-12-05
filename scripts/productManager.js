@@ -50,5 +50,4 @@ export class ProductManager {
         this.#products = value;
     }
 
-
 }
