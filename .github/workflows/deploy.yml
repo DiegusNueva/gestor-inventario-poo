@@ -3,11 +3,11 @@ name: Deploy to EC2
 on:
   push:
     branches:
-      - main
+      - main  # Ajusta según tus ramas
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # Puedes ajustar la imagen según tus necesidades
 
     steps:
     - name: Checkout repository
@@ -15,7 +15,4 @@ jobs:
 
     - name: Install dependencies and deploy
       run: |
-        echo "$SSH_PRIVATE_KEY" > key.pem
-        chmod 600 key.pem
-        ssh-keyscan -H 13.38.119.133 >> key.pem
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@13.38.119.133 'cd /var/www/html && git pull origin main'
+        ssh -i ${{ secrets.SSH_PRIVATE_KEY_PATH }} ubuntu@13.38.119.133 'cd /var/www/html && git pull origin main'
