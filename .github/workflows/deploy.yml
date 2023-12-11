@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04  # Puedes ajustar la imagen según tus necesidades
+    runs-on: ubuntu-latest  # Puedes ajustar la imagen según tus necesidades
 
     steps:
     - name: Checkout repository
