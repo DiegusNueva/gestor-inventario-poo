@@ -19,4 +19,4 @@ jobs:
         script: |
           cd /var/www/html
           rm -rf *
-          git clone https://github.com/DiegusNueva/gestor-inventario-poo.git .
+          sudo git clone https://github.com/DiegusNueva/gestor-inventario-poo.git .
