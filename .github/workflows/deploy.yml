@@ -3,11 +3,11 @@ name: Deploy to EC2
 on:
   push:
     branches:
-      - main  # Cambia esto según el nombre de tu rama principal
+      - main  # Cambiar en función del nombre de la rama principal
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Se puede poner expresamente la versión de Ubuntu
 
     steps:
     - name: SSH into EC2 and execute commands
