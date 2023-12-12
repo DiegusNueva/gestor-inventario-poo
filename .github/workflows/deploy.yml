@@ -18,5 +18,6 @@ jobs:
         key: ${{ secrets.EC2_PRIVATE_KEY }}
         script: |
           cd /var/www/html
-          sudo rm -rf .*
+          sudo rm -rf ./*
           sudo git clone https://github.com/DiegusNueva/gestor-inventario-poo.git .
+          sudo systemctl restart nginx
